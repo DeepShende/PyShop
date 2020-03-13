@@ -4,7 +4,7 @@ from .models import Product
 
 # Create your views here.
 
-def index(request): #This basically passes a refrence that HTTP has requested.
+def index(request): #This basically Deep passes a refrence that HTTP has requested.
     product =Product.objects.all()
     return render(request,"index.html", #No need to import temlate django automatically looks for template directory and we just have to pass the template name to it.
                   {"product":product}) #This is a dictionary used as context where a object is passed with a new variable name.
